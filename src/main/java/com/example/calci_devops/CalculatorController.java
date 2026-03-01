@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/calc")
 public class CalculatorController {
 
+    @GetMapping("/")
+    public String home() {
+        return "Calculator API is running !!";
+    }
+
     @GetMapping("/add")
     public int add(@RequestParam int a, @RequestParam int b) {
         return a + b;
